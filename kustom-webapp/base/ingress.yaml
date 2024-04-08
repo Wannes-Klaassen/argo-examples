@@ -7,11 +7,11 @@ metadata:
     # cert-manager.io/issuer: "devtest-letsencrypt-prod"
   # spec:
   #   tls:
-  #     - hosts:
-  #         - $(hostname)
-  #       secretName: mywebapp-tls-secret
+  #   - hosts:
+  #     - <YOUR_HOSTNAME>
+  #     secretName: mywebapp-tls-secret
   rules:
-    - host: $(hostname)
+    - host: argotest.wannes.stages-2024.axxes.cloud
       http:
         paths:
           - path: /

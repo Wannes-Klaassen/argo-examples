@@ -12,8 +12,7 @@ commonAnnotations:
 namePrefix: kustom-
 
 nameSuffix: -v1
-
-configMapGenerator:
-  - name: hostname-configmap
-    literals:
-      - hostname=argotest.wannes.stages-2024.axxes.cloud
+# configMapGenerator:
+#   - name: hostname-configmap
+#     literals:
+#       - hostname=argotest.wannes.stages-2024.axxes.cloud
