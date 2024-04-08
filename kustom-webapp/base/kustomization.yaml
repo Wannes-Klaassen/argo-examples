@@ -1,6 +1,7 @@
 resources:
-- deployment.yaml
-- service.yaml
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
 
 commonLabels:
   app: kustomwebapp
@@ -8,8 +9,11 @@ commonLabels:
 commonAnnotations:
   app: mykustom-annontations
 
-namePrefix:
-  kustom-
+namePrefix: kustom-
 
-nameSuffix:
-  -v1
+nameSuffix: -v1
+
+configMapGenerator:
+  - name: hostname-configmap
+    literals:
+      - hostname=argotest.wannes.stages-2024.axxes.cloud
