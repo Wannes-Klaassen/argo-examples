@@ -4,20 +4,18 @@ metadata:
   name: mywebapp-ingress
   namespace: dev
   annotations:
-    # cert-manager.io/issuer: "devtest-letsencrypt-prod"
-  # spec:
-  #   tls:
-  #   - hosts:
-  #     - <YOUR_HOSTNAME>
-  #     secretName: mywebapp-tls-secret
+    
+spec:
+  ingressClassName: nginx
   rules:
-    - host: argotest.wannes.stages-2024.axxes.cloud
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: kustom-mywebapp-v1
-                port:
-                  number: 80
+- host: argotest.wannes.stages-2024.axxes.cloud
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: mywebapp
+              port:
+                number: 80
+    
