@@ -1,7 +1,7 @@
 replicas: 2
 
 configmap:
-  name: myhelmapp-configmap-v2.2
+  name: myhelmapp-configmap-v2.0
   data:
-    CUSTOM_HEADER: "This is on the DEV environment!
+    CUSTOM_HEADER: "This is on the DEV environment!"
     BG_COLOR: "#E99706"
